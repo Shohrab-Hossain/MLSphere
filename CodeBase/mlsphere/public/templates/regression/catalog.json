@@ -1,0 +1,8 @@
+[
+  { "package": "src/data",          "blockName": "Load Data",      "section": "Data" },
+  { "package": "src/preprocessing", "blockName": "Preprocess",     "section": "Processing" },
+  { "package": "src/scaling",       "blockName": "Scale Features", "section": "Feature" },
+  { "package": "src/model",         "blockName": "Model",          "section": "Model" },
+  { "package": "src/training",      "blockName": "Train",          "section": "Training" },
+  { "package": "src/evaluation",    "blockName": "Evaluate",       "section": "Evaluation" }
+]

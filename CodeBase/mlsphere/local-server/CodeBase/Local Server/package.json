@@ -1,0 +1,33 @@
+{
+  "name": "mlsphere-agent",
+  "version": "1.0.0",
+  "description": "MLSphere Desktop Agent - Executes ML pipelines locally",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "package:win": "pkg . --targets node16-win-x64 --output ../release/agent/installers/mlsphere-agent-win.exe",
+    "package:macos": "pkg . --targets node16-macos-x64 --output ../release/agent/installers/mlsphere-agent-macos",
+    "package:linux": "pkg . --targets node16-linux-x64 --output ../release/agent/installers/mlsphere-agent-linux",
+    "package:all": "npm run package:win && npm run package:macos && npm run package:linux"
+  },
+  "bin": "server.js",
+  "pkg": {
+    "assets": [
+      "config.json",
+      "README.md"
+    ],
+    "outputPath": "../release/agent/installers"
+  },
+  "keywords": [
+    "ml",
+    "machine-learning",
+    "desktop-agent",
+    "mlsphere"
+  ],
+  "author": "MLSphere",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "pkg": "^5.8.0"
+  }
+}

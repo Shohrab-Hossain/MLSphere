@@ -1,0 +1,21 @@
+{
+  "id": "nlp",
+  "name": "NLP",
+  "icon": "💬",
+  "description": "Sentiment analysis — TF-IDF features with MultinomialNB and LinearSVC comparison",
+  "features": ["Text Loading", "Preprocessing", "TF-IDF", "Classification", "Model Comparison"],
+  "type": "nlp",
+  "allSourceFiles": [
+    "src/data/data_loader.py",
+    "src/preprocessing/preprocessor.py",
+    "src/embedding/embedder.py",
+    "src/model/model.py",
+    "src/main.py"
+  ],
+  "blocks": [
+    { "type": "TextLoader",      "name": "Load Text Data",   "icon": "📥", "category": "Data",       "file": "src/data/data_loader.py",          "packages": ["pandas"],              "inputs": [],               "outputs": ["text_data","labels"] },
+    { "type": "TextPreprocessor","name": "Preprocess",        "icon": "🔧", "category": "Processing", "file": "src/preprocessing/preprocessor.py", "packages": [],                      "inputs": ["text_data"],    "outputs": ["processed_text"] },
+    { "type": "Embedder",        "name": "TF-IDF Embeddings", "icon": "🧮", "category": "Feature",    "file": "src/embedding/embedder.py",     "packages": ["scikit-learn"],        "inputs": ["processed_text"],"outputs": ["embeddings","vectorizer"] },
+    { "type": "NLPModel",        "name": "Train & Evaluate",  "icon": "🤖", "category": "Model",      "file": "src/model/model.py",         "packages": ["scikit-learn","numpy"], "inputs": ["embeddings","labels"], "outputs": ["best_model"] }
+  ]
+}

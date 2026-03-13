@@ -1,0 +1,7 @@
+[
+  { "package": "src/data",          "blockName": "Load Time Series", "section": "Data" },
+  { "package": "src/preprocessing", "blockName": "Preprocess",       "section": "Processing" },
+  { "package": "src/model",         "blockName": "ARIMA Model",      "section": "Model" },
+  { "package": "src/training",      "blockName": "Train & Forecast", "section": "Training" },
+  { "package": "src/visualization", "blockName": "Visualize",        "section": "Visualization" }
+]

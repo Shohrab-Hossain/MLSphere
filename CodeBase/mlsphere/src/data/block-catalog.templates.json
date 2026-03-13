@@ -1,0 +1,39 @@
+{
+  "classification": [
+    { "package": "data_loader",  "blockName": "Load Data",      "section": "Data" },
+    { "package": "preprocessor", "blockName": "Preprocess",     "section": "Processing" },
+    { "package": "scaler",       "blockName": "Scale Features", "section": "Processing" },
+    { "package": "model",        "blockName": "Model",          "section": "Model" },
+    { "package": "trainer",      "blockName": "Train",          "section": "Training" },
+    { "package": "evaluator",    "blockName": "Evaluate",       "section": "Evaluation" }
+  ],
+  "regression": [
+    { "package": "data_loader",  "blockName": "Load Data",      "section": "Data" },
+    { "package": "preprocessor", "blockName": "Preprocess",     "section": "Processing" },
+    { "package": "scaler",       "blockName": "Scale Features", "section": "Processing" },
+    { "package": "model",        "blockName": "Model",          "section": "Model" },
+    { "package": "trainer",      "blockName": "Train",          "section": "Training" },
+    { "package": "evaluator",    "blockName": "Evaluate",       "section": "Evaluation" }
+  ],
+  "clustering": [
+    { "package": "data_loader",  "blockName": "Load Data",      "section": "Data" },
+    { "package": "preprocessor", "blockName": "Preprocess",     "section": "Processing" },
+    { "package": "scaler",       "blockName": "Scale Features", "section": "Processing" },
+    { "package": "model",        "blockName": "Clustering",     "section": "Model" },
+    { "package": "visualizer",   "blockName": "Visualize",      "section": "Visualization" }
+  ],
+  "timeseries": [
+    { "package": "data_loader",  "blockName": "Load Time Series", "section": "Data" },
+    { "package": "preprocessor", "blockName": "Preprocess",       "section": "Processing" },
+    { "package": "model",        "blockName": "ARIMA Model",       "section": "Model" },
+    { "package": "trainer",      "blockName": "Train & Forecast",  "section": "Training" },
+    { "package": "visualizer",   "blockName": "Visualize",         "section": "Visualization" }
+  ],
+  "nlp": [
+    { "package": "data_loader",  "blockName": "Load Text Data",    "section": "Data" },
+    { "package": "preprocessor", "blockName": "Preprocess",        "section": "Processing" },
+    { "package": "embedder",     "blockName": "TF-IDF Embeddings", "section": "Feature" },
+    { "package": "model",        "blockName": "Train & Evaluate",  "section": "Model" }
+  ],
+  "blank": []
+}

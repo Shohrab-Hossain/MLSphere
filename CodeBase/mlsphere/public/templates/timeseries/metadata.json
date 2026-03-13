@@ -1,0 +1,23 @@
+{
+  "id": "timeseries",
+  "name": "Time Series",
+  "icon": "⏱️",
+  "description": "Sales forecasting — ARIMA time series model with visualization",
+  "features": ["Data Loading", "Stationarity Test", "ARIMA Model", "Forecasting", "Visualization"],
+  "type": "timeseries",
+  "allSourceFiles": [
+    "src/data/data_loader.py",
+    "src/preprocessing/preprocessor.py",
+    "src/model/model.py",
+    "src/training/trainer.py",
+    "src/visualization/visualizer.py",
+    "src/main.py"
+  ],
+  "blocks": [
+    { "type": "DataLoader",         "name": "Load Time Series", "icon": "📥", "category": "Data",          "file": "src/data/data_loader.py",          "packages": ["pandas","numpy"],             "inputs": [],                              "outputs": ["time_series"] },
+    { "type": "Preprocessor",       "name": "Preprocess",       "icon": "🔧", "category": "Processing",    "file": "src/preprocessing/preprocessor.py", "packages": ["numpy","statsmodels"],        "inputs": ["time_series"],                 "outputs": ["train_vals","test_vals","all_vals"] },
+    { "type": "TimeSeriesModel",    "name": "ARIMA Model",      "icon": "🤖", "category": "Model",         "file": "src/model/model.py",         "packages": ["statsmodels"],                "inputs": ["train_vals"],                  "outputs": ["ts_model"] },
+    { "type": "Trainer",            "name": "Train & Forecast", "icon": "⚡", "category": "Training",      "file": "src/training/trainer.py",      "packages": ["statsmodels","scikit-learn"], "inputs": ["ts_model","test_vals"],        "outputs": ["fitted_model","forecast"] },
+    { "type": "ForecastVisualizer", "name": "Visualize",        "icon": "📈", "category": "Visualization", "file": "src/visualization/visualizer.py", "packages": ["matplotlib"],                 "inputs": ["all_vals","forecast","test_vals"], "outputs": ["fig"] }
+  ]
+}

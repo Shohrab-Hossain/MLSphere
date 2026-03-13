@@ -1,0 +1,6 @@
+[
+  { "package": "src/data",          "blockName": "Load Text Data",   "section": "Data" },
+  { "package": "src/preprocessing", "blockName": "Preprocess",       "section": "Processing" },
+  { "package": "src/embedding",     "blockName": "TF-IDF Embeddings","section": "Feature" },
+  { "package": "src/model",         "blockName": "Train & Evaluate", "section": "Model" }
+]

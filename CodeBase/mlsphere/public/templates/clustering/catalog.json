@@ -1,0 +1,7 @@
+[
+  { "package": "src/data",          "blockName": "Load Data",      "section": "Data" },
+  { "package": "src/preprocessing", "blockName": "Preprocess",     "section": "Processing" },
+  { "package": "src/scaling",       "blockName": "Scale Features", "section": "Feature" },
+  { "package": "src/model",         "blockName": "Clustering",     "section": "Model" },
+  { "package": "src/visualization", "blockName": "Visualize",      "section": "Visualization" }
+]

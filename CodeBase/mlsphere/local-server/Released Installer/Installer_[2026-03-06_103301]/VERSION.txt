@@ -1,0 +1,15 @@
+MLSphere Desktop Agent
+Version: 1.0.0
+Release Date: 2026-03-06
+Build: 103301
+
+Platform Builds Included:
+- Windows (x64)
+- Linux (x64)
+- macOS (x64, ARM64)
+
+Installation Files:
+- windows/mlsphere-agent-win-x64.exe
+- linux/mlsphere-agent-linux-x64
+- macos/mlsphere-agent-macos-x64
+- macos/mlsphere-agent-macos-arm64

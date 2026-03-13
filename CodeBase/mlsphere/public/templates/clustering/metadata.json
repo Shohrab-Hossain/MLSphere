@@ -1,0 +1,23 @@
+{
+  "id": "clustering",
+  "name": "Clustering",
+  "icon": "🔀",
+  "description": "Customer segmentation — unsupervised clustering with KMeans",
+  "features": ["Data Loading", "Preprocessing", "Feature Scaling", "KMeans", "Visualization"],
+  "type": "clustering",
+  "allSourceFiles": [
+    "src/data/data_loader.py",
+    "src/preprocessing/preprocessor.py",
+    "src/scaling/scaler.py",
+    "src/model/model.py",
+    "src/visualization/visualizer.py",
+    "src/main.py"
+  ],
+  "blocks": [
+    { "type": "DataLoader",      "name": "Load Data",      "icon": "📥", "category": "Data",          "file": "src/data/data_loader.py",          "packages": ["pandas","numpy"],            "inputs": [],                                            "outputs": ["data"] },
+    { "type": "Preprocessor",    "name": "Preprocess",     "icon": "🔧", "category": "Processing",    "file": "src/preprocessing/preprocessor.py", "packages": ["numpy"],                     "inputs": ["data"],                                      "outputs": ["features_df"] },
+    { "type": "FeatureScaler",   "name": "Scale Features", "icon": "📊", "category": "Processing",    "file": "src/scaling/scaler.py",       "packages": ["scikit-learn"],              "inputs": ["features_df"],                               "outputs": ["X_scaled","scaler"] },
+    { "type": "ClusteringModel", "name": "Clustering",     "icon": "🔀", "category": "Model",         "file": "src/model/model.py",         "packages": ["scikit-learn"],              "inputs": ["X_scaled"],                                  "outputs": ["model","cluster_labels"] },
+    { "type": "Visualizer",      "name": "Visualize",      "icon": "📊", "category": "Visualization", "file": "src/visualization/visualizer.py", "packages": ["matplotlib","scikit-learn"], "inputs": ["X_scaled","cluster_labels","model","features_df"], "outputs": ["fig"] }
+  ]
+}

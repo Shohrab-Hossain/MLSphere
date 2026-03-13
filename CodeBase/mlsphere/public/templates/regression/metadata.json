@@ -1,0 +1,25 @@
+{
+  "id": "regression",
+  "name": "Regression",
+  "icon": "📈",
+  "description": "House price prediction — regression with Gradient Boosting",
+  "features": ["Data Loading", "Preprocessing", "Feature Scaling", "Gradient Boosting", "Evaluation"],
+  "type": "regression",
+  "allSourceFiles": [
+    "src/data/data_loader.py",
+    "src/preprocessing/preprocessor.py",
+    "src/scaling/scaler.py",
+    "src/model/model.py",
+    "src/training/trainer.py",
+    "src/evaluation/evaluator.py",
+    "src/main.py"
+  ],
+  "blocks": [
+    { "type": "DataLoader",    "name": "Load Data",       "icon": "📥", "category": "Data",       "file": "src/data/data_loader.py",         "packages": ["pandas","numpy"],        "inputs": [],                                   "outputs": ["data"] },
+    { "type": "Preprocessor",  "name": "Preprocess",      "icon": "🔧", "category": "Processing", "file": "src/preprocessing/preprocessor.py", "packages": ["scikit-learn"],          "inputs": ["data"],                             "outputs": ["X_train","X_test","y_train","y_test"] },
+    { "type": "FeatureScaler", "name": "Scale Features",  "icon": "📊", "category": "Processing", "file": "src/scaling/scaler.py",       "packages": ["scikit-learn"],          "inputs": ["X_train","X_test"],                 "outputs": ["X_train_scaled","X_test_scaled","scaler"] },
+    { "type": "Model",         "name": "Model",           "icon": "🤖", "category": "Model",      "file": "src/model/model.py",         "packages": ["scikit-learn"],          "inputs": [],                                   "outputs": ["model"] },
+    { "type": "Trainer",       "name": "Train",           "icon": "⚡", "category": "Training",   "file": "src/training/trainer.py",      "packages": ["scikit-learn"],          "inputs": ["model","X_train_scaled","y_train"], "outputs": ["model"] },
+    { "type": "Evaluator",     "name": "Evaluate",        "icon": "📈", "category": "Evaluation", "file": "src/evaluation/evaluator.py",    "packages": ["scikit-learn","numpy"],  "inputs": ["model","X_test_scaled","y_test"],   "outputs": ["metrics"] }
+  ]
+}

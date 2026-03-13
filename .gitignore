@@ -1,0 +1,171 @@
+# ===========================
+# Node.js & NPM
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+package-lock.json.bak
+*.tgz
+
+# ===========================
+# Vue.js & Build Outputs
+# ===========================
+/dist
+/dist-ssr
+*.local
+.cache
+.temp
+
+# ===========================
+# Environment Variables
+# ===========================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+
+# ===========================
+# Python (for local-server)
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg
+*.egg-info/
+dist-python/
+build-python/
+
+# ===========================
+# IDEs & Editors
+# ===========================
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA / WebStorm / PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ===========================
+# Operating System Files
+# ===========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# ===========================
+# Logs & Debugging
+# ===========================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.npm
+.eslintcache
+
+# ===========================
+# Testing & Coverage
+# ===========================
+coverage/
+.nyc_output/
+*.lcov
+.jest/
+
+# ===========================
+# Build & Release Artifacts
+# ===========================
+/dist/
+/build/
+*.tar.gz
+*.zip
+
+# Local Server Releases (keep structure, ignore installers)
+local-server/Released Installer/*/windows/*
+local-server/Released Installer/*/linux/*
+local-server/Released Installer/*/macos/*
+!local-server/Released Installer/*/.gitkeep
+
+# ===========================
+# Temporary Files
+# ===========================
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# ===========================
+# Database Files
+# ===========================
+*.db
+*.sqlite
+*.sqlite3
+
+# ===========================
+# Project Specific
+# ===========================
+# User uploaded projects data
+/user-projects/
+/uploads/
+
+# Generated documentation (if auto-generated)
+/docs-generated/
